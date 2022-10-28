@@ -8,3 +8,9 @@
 // A manager manages employees
 
 // A manager can sometimes work as a cashier and a pharmacist.
+
+
+class cashier {
+    this.cash = cash
+
+}

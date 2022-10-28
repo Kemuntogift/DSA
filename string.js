@@ -7,3 +7,17 @@
 
 // When S = ' Tempor ip'
 // the output should be 'meT roppi'
+
+function reverseString(arr) {
+    let result = [];
+    let prevWord = [];
+    for (let i = arr.length - 1; i >= 0; i--) {
+        prevWord.push(arr[i]);
+        if (prevWord.length === 4) {
+            result.push(prevWord);
+            prevWord = [];
+        }
+    }
+
+    return result;
+}

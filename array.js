@@ -4,9 +4,12 @@
 // if the array, [1, 2, 4, 7], so
 // return 14.
 
-function add(a, b, ...elems)) {
-    return a + b + elems;
-}
 
-add(1, 2, 5, 6);
-console.log(add);
+function sum(arr) {
+    let addition = 0;
+    for (let i = 0; i < arr.length; i++) {
+        addition += arr[i];
+    }
+    return addition;
+}
+console.log(sum([2, 4, 5, 8]));
