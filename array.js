@@ -12,4 +12,4 @@ function sum(arr) {
     }
     return addition;
 }
-console.log(sum([2, 4, 5, 8]));
+console.log(sum([2, 4, 5, 8, 9, 10]));

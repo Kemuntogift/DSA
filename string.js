@@ -8,16 +8,51 @@
 // When S = ' Tempor ip'
 // the output should be 'meT roppi'
 
-function reverseString(arr) {
-    let result = [];
-    let prevWord = [];
-    for (let i = arr.length - 1; i >= 0; i--) {
-        prevWord.push(arr[i]);
-        if (prevWord.length === 4) {
-            result.push(prevWord);
-            prevWord = [];
-        }
+
+let str = "Lorem at";
+
+// method 1: for loop
+function reverseString() {
+    let splitStr = str.split("");
+
+    let newArr = [];
+
+    for (let i = 0; i < splitStr.length; i += 4) {
+        let sliceReverse = splitStr
+            .slice(i, i + 4)
+            .reverse()
+            .join("");
+        newArr.push(sliceReverse);
     }
 
-    return result;
+    let finalStr = newArr.join("");
+
+    console.log(finalStr);
 }
+
+reverseString(str);
+
+// method 2: for-of loop
+function reverseString2(str) {
+    let num = 0;
+
+    let splitStr = str.split("");
+
+    let newArr = [];
+
+    for (let i of splitStr) {
+        let reversedStr = splitStr
+            // .split("")
+            .slice((i = num), i + 4)
+            .reverse()
+            .join("");
+        newArr.push(reversedStr);
+        num += 4;
+    }
+
+    let finalStr = newArr.join("");
+
+    console.log(finalStr);
+}
+
+reverseString2(str);
